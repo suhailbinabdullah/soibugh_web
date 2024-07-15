@@ -4,21 +4,22 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useNavigate } from 'react-router-dom';
 
 const TopBar = () => {
+
+    const navigate = useNavigate()
     return (
-        <Navbar expand="lg" bg="warning" sticky='top'>
+        <Navbar expand="lg" bg="info" sticky='top'>
             <Container fluid>
-                <Navbar.Brand href="#">Soibugh Online</Navbar.Brand>
+                <Navbar.Brand href="#">Soibugh Budgam</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
-                    <Nav
+                    {/* <Nav
                         className="me-auto my-2 my-lg-2"
-                    // style={{ maxHeight: '100px' }}
-                    // navbarScroll
                     >
                         <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">About</Nav.Link>
+                        <Nav.Link onClick={() => navigate("/generic-component")}>About</Nav.Link>
                         <NavDropdown title="Developer" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Youtube</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">
@@ -40,8 +41,8 @@ const TopBar = () => {
                             className="me-2"
                             aria-label="Search"
                         />
-                        <Button variant="outline-success">Search</Button>
-                    </Form>
+                        <Button variant="outline-light">Search</Button>
+                    </Form> */}
                 </Navbar.Collapse>
             </Container>
         </Navbar>

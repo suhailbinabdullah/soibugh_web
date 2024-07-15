@@ -1,12 +1,12 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import './App.css';
 import Navbar from './components/navbar';
-import "react-toastify/dist/ReactToastify.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div>
+    <div className='custom-bg'>
       <ToastContainer
         position="top-center"
         autoClose={3000}
@@ -19,6 +19,16 @@ function App() {
         pauseOnHover={false}
         theme="colored"
       />
+
+      {/* <Routes>
+        <Route path="*" element={<Navigate to="/" />} />
+        <Route
+          path="/generic-component"
+          element={
+            <GenericComponent />
+          }
+        />
+      </Routes> */}
       <Navbar />
     </div>
   );
