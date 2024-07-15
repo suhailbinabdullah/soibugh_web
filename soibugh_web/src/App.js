@@ -6,7 +6,7 @@ import Navbar from './components/navbar';
 
 function App() {
   return (
-    <div className='custom-bg'>
+    <div>
       <ToastContainer
         position="top-center"
         autoClose={3000}
