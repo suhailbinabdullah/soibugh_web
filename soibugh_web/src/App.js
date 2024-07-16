@@ -6,7 +6,7 @@ import Navbar from './components/navbar';
 
 function App() {
   return (
-    <div>
+    <>
       <ToastContainer
         position="top-center"
         autoClose={3000}
@@ -30,7 +30,7 @@ function App() {
         />
       </Routes> */}
       <Navbar />
-    </div>
+    </>
   );
 }
 

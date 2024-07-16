@@ -7,9 +7,10 @@ import { groupBy, mapMenuDataToAntdMenu1 } from '../../utils/AppExtenstions';
 import TopBar from './topbar';
 
 import Thumbnail from '../../assets/images/Image_not_available.png';
-import LoadingFull from '../../assets/images/Loading-Full.gif';
+import LoadingFull from '../../assets/images/server_loading.gif';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import GenericComponent from '../generic-component';
+import LandingComponent from '../landing-component';
 
 var data = require('../../assets/SoibughOnline.json');
 
@@ -17,7 +18,7 @@ var data = require('../../assets/SoibughOnline.json');
 
 
 const Navbar = () => {
-    const [selectedItem, setSelectedItem] = useState({ id: "start", body: "Welcome to Soibugh Online" });
+    const [selectedItem, setSelectedItem] = useState({ id: "start" });
     const [items, setItems] = useState([]);
     const [thumbnail, setThumbnail] = useState(Thumbnail);
     const [loading, setLoading] = useState(true);
@@ -78,11 +79,15 @@ const Navbar = () => {
 
     return (
         <>
-            <TopBar />
+            {/* <TopBar /> */}
             {/* <img src='https://picsum.photos/236/60' alt='' /> */}
-            {/* <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} /> */}
+            <div className=' bg-info pt-2 position-fixed w-100 z-1 overflow-hidden'>
+                <h3 onClick={() => setSelectedItem({ id: "start" })} className='text-primary-emphasis text-center cp'>SOIBUGH BUDGAM</h3>
+                <Menu className='bg-info' onClick={onClick} mode="horizontal" items={items} />
+            </div >
+
             <div className='d-flex'>
-                <Menu className='bg-info bg-opacity-25' onClick={onClick} style={{ width: 220, height: "100vh" }} mode="vertical" items={items} />
+                {/* <Menu className='bg-info bg-opacity-25' onClick={onClick} style={{ width: 220, height: "100vh" }} mode="vertical" items={items} /> */}
                 {/* <img src={selectedItem?.image_url} alt='' /> */}
 
                 {/* <Card>
@@ -95,10 +100,11 @@ const Navbar = () => {
                     </Card.Body>
                 </Card> */}
 
-                <div className='p-3 m-1 w-100 card bg-info bg-opacity-10'>
+                <div style={{ marginTop: 90 }} className='p-3 w-100 bg-info bg-opacity-10'>
+                    {/* <div className='p-3 m-1 w-100 card bg-info bg-opacity-10'> */}
                     {selectedItem?.id === "start" ?
                         <>
-                            <h1 className='text-center text-info'>Welcome to Village Soibugh</h1>
+                            <LandingComponent />
                         </>
 
                         :
@@ -110,12 +116,13 @@ const Navbar = () => {
                             /> */}
                             <div className='text-center mb-3'>
                                 <Spin tip="Image Loading..." spinning={false}>
-                                    {!loading ? <Image rounded src={thumbnail} width={400} fluid /> : <Image rounded src={LoadingFull} width={400} fluid />}
+                                    {!loading ? <Image rounded src={thumbnail} width={400} fluid /> : <Image width={400} fluid rounded src={LoadingFull} />}
                                 </Spin>
                                 {/* <Image rounded src={selectedItem?.image_url} width={500} fluid /> */}
                             </div>
 
-                            <h5 style={{ lineHeight: 1.5, textAlign: "justify" }}
+                            <h2>{selectedItem?.title}</h2>
+                            <p style={{ lineHeight: 1.5, textAlign: "justify" }}
                                 dangerouslySetInnerHTML={{ __html: "" + selectedItem?.body }}
                             />
                         </>

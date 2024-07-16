@@ -4,3 +4,7 @@
   background-attachment: fixed;
   background-size: cover;
 }
+
+.cp {
+  cursor: pointer;
+}
