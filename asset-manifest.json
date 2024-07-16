@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/soibugh_web/static/css/main.78ccada8.css",
-    "main.js": "/soibugh_web/static/js/main.56c137d0.js",
+    "main.css": "/soibugh_web/static/css/main.df0ef658.css",
+    "main.js": "/soibugh_web/static/js/main.7ecc16e1.js",
     "static/js/453.9e23da07.chunk.js": "/soibugh_web/static/js/453.9e23da07.chunk.js",
     "static/media/Image_not_available.png": "/soibugh_web/static/media/Image_not_available.fa1f50a379aa2fff63cd.png",
     "index.html": "/soibugh_web/index.html",
-    "main.78ccada8.css.map": "/soibugh_web/static/css/main.78ccada8.css.map",
-    "main.56c137d0.js.map": "/soibugh_web/static/js/main.56c137d0.js.map",
+    "main.df0ef658.css.map": "/soibugh_web/static/css/main.df0ef658.css.map",
+    "main.7ecc16e1.js.map": "/soibugh_web/static/js/main.7ecc16e1.js.map",
     "453.9e23da07.chunk.js.map": "/soibugh_web/static/js/453.9e23da07.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.78ccada8.css",
-    "static/js/main.56c137d0.js"
+    "static/css/main.df0ef658.css",
+    "static/js/main.7ecc16e1.js"
   ]
 }
