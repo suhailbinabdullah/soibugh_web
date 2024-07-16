@@ -1,17 +1,16 @@
 {
   "files": {
     "main.css": "/soibugh_web/static/css/main.78ccada8.css",
-    "main.js": "/soibugh_web/static/js/main.b66a40e5.js",
+    "main.js": "/soibugh_web/static/js/main.56c137d0.js",
     "static/js/453.9e23da07.chunk.js": "/soibugh_web/static/js/453.9e23da07.chunk.js",
-    "static/media/Loading-Full.gif": "/soibugh_web/static/media/Loading-Full.253d583fdccbe2313e6e.gif",
     "static/media/Image_not_available.png": "/soibugh_web/static/media/Image_not_available.fa1f50a379aa2fff63cd.png",
     "index.html": "/soibugh_web/index.html",
     "main.78ccada8.css.map": "/soibugh_web/static/css/main.78ccada8.css.map",
-    "main.b66a40e5.js.map": "/soibugh_web/static/js/main.b66a40e5.js.map",
+    "main.56c137d0.js.map": "/soibugh_web/static/js/main.56c137d0.js.map",
     "453.9e23da07.chunk.js.map": "/soibugh_web/static/js/453.9e23da07.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.78ccada8.css",
-    "static/js/main.b66a40e5.js"
+    "static/js/main.56c137d0.js"
   ]
 }
