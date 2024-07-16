@@ -1,8 +1,8 @@
 // import { toast } from 'react-toastify';
 
-import { Alert, Flex, Menu, Spin } from 'antd';
+import { Alert, Card, Flex, Menu, Spin } from 'antd';
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Container, Image, Row } from 'react-bootstrap';
+import { Col, Container, Image, Row } from 'react-bootstrap';
 import { groupBy, mapMenuDataToAntdMenu1 } from '../../utils/AppExtenstions';
 import TopBar from './topbar';
 
@@ -13,6 +13,7 @@ import GenericComponent from '../generic-component';
 import LandingComponent from '../landing-component';
 
 var data = require('../../assets/SoibughOnline.json');
+const { Meta } = Card;
 
 
 
@@ -125,6 +126,27 @@ const Navbar = () => {
                             <p style={{ lineHeight: 1.5, textAlign: "justify" }}
                                 dangerouslySetInnerHTML={{ __html: "" + selectedItem?.body }}
                             />
+                            <Row>
+                                {selectedItem?.images &&
+                                    selectedItem?.images.map((image, index) => {
+                                        return (
+
+                                            <Col key={index} xs={12} md={6} lg={4} xl={3}>
+                                                <Spin tip="Image Loading..." spinning={loading}>
+
+                                                    <Card
+                                                        className='mt-3'
+                                                        hoverable
+                                                        cover={<img alt="example" src={image?.image_url} />}
+                                                    >
+                                                        <Meta title={image?.caption} description={image?.body} />
+                                                    </Card>
+                                                </Spin>
+                                            </Col>
+                                        )
+                                    })
+                                }
+                            </Row>
                         </>
                     }
                 </div>
