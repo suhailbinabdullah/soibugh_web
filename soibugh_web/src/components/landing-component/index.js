@@ -40,7 +40,7 @@ const LandingComponent = (props) => {
                 {data?.images?.map((image, index) => {
                     return (
                         <div key={index}>
-                            <Image height={200} className="w-100" src={image?.image_url} />
+                            <Image className="w-100" src={image} />
                         </div>
                     )
                 })}

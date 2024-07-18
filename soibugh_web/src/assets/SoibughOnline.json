@@ -693,5 +693,17 @@
         "author": "Admin"
       }
     ]
+  },
+  {
+    "id": "banners",
+    "section": "",
+    "images": [
+      "https://i.ibb.co/L1LB7Qm/banner1.jpg",
+      "https://i.ibb.co/Fwz2jQ7/banner2.jpg",
+      "https://i.ibb.co/fnBkJx3/banner3.jpg",
+      "https://i.ibb.co/6HkVkkr/banner4.jpg",
+      "https://i.ibb.co/QQ7V1WQ/banner5.jpg",
+      "https://i.ibb.co/82cbJJW/banner6.jpg"
+    ]
   }
 ]

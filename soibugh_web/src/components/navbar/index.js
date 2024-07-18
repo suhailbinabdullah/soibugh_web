@@ -106,7 +106,7 @@ const Navbar = () => {
                 <div style={{ marginTop: 90 }} className='p-3 w-100 bg-info bg-opacity-10'>
                     {selectedItem?.id === "start" ?
                         <>
-                            <LandingComponent data={data.find(o => o.id === '72')} />
+                            <LandingComponent data={data.find(o => o.id === 'banners')} />
                         </>
 
                         :
