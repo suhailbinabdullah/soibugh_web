@@ -1,17 +1,15 @@
 // import { toast } from 'react-toastify';
 
-import { Alert, Card, Flex, Menu, Spin } from 'antd';
+import { Card, Menu, Spin } from 'antd';
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Col, Image, Row } from 'react-bootstrap';
 import { groupBy, mapMenuDataToAntdMenu1 } from '../../utils/AppExtenstions';
-import TopBar from './topbar';
 
 import Thumbnail from '../../assets/images/Image_not_available.png';
 import LoadingFull from '../../assets/images/server_loading.gif';
-import { Navigate, Route, Routes } from 'react-router-dom';
-import GenericComponent from '../generic-component';
-import LandingComponent from '../landing-component';
+import Logo from '../../assets/images/soibugh_logo.png';
 import ImageModal from '../image-modal';
+import LandingComponent from '../landing-component';
 
 var data = require('../../assets/SoibughOnline.json');
 const { Meta } = Card;
@@ -96,7 +94,10 @@ const Navbar = () => {
         <>
             {/* <TopBar /> */}
             <div className=' bg-info pt-2 position-fixed w-100 z-1 overflow-hidden'>
-                <h3 onClick={() => setSelectedItem({ id: "start" })} className='text-primary-emphasis text-center cp'>SOIBUGH BUDGAM</h3>
+                {/* <h3 onClick={() => setSelectedItem({ id: "start" })} className='text-primary-emphasis text-center cp'>SOIBUGH BUDGAM</h3> */}
+                <div className='text-center cp' onClick={() => setSelectedItem({ id: "start" })}>
+                    <Image width={210} src={Logo} />
+                </div>
                 <Menu className='bg-info' onClick={onClick} mode="horizontal" items={items} />
             </div >
 
