@@ -12,6 +12,7 @@ import ImageModal from '../image-modal';
 import LandingComponent from '../landing-component';
 
 var data = require('../../assets/SoibughOnline.json');
+var banners = require('../../assets/Banners.json');
 const { Meta } = Card;
 
 
@@ -81,7 +82,7 @@ const Navbar = () => {
 
     useEffect(() => {
         console.log("rawData", data);
-        data.sort((a, b) => a.id.localeCompare(b.id));
+        data.sort((a, b) => a.sorting_order.localeCompare(b.sorting_order));
 
         const groupBySection = groupBy(data, 'section')
         console.log("groupBySection", groupBySection);
@@ -106,7 +107,7 @@ const Navbar = () => {
                 <div style={{ marginTop: 90 }} className='p-3 w-100 bg-info bg-opacity-10'>
                     {selectedItem?.id === "start" ?
                         <>
-                            <LandingComponent data={data.find(o => o.id === 'banners')} />
+                            <LandingComponent data={banners} />
                         </>
 
                         :
