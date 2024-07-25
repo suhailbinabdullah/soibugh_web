@@ -8,3 +8,12 @@
 .cp {
   cursor: pointer;
 }
+
+.max-lines {
+  display: block; /* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 6em;
+  line-height: 1.2em; /*where max-height: = line-height: × <number-of-lines> in em.*/
+}

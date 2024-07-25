@@ -54,8 +54,8 @@ const LandingComponent = (props) => {
             <Row>
                 {facebookData?.map((item, index) => {
                     return (
-                        <Col className="mb-4" key={index} xs={12} sm={12} md={6} lg={4} xl={3}>
-                            <FacebookTiles item={item} />
+                        <Col className="mb-3" key={index} xs={12} sm={12} md={6} lg={4} xl={3}>
+                            <FacebookTiles item={item} index={index} />
                         </Col>
                     )
                 })}
