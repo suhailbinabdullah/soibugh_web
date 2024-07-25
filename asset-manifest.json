@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/soibugh_web/static/css/main.121919d3.css",
-    "main.js": "/soibugh_web/static/js/main.3c6f9a0c.js",
-    "static/js/453.9e23da07.chunk.js": "/soibugh_web/static/js/453.9e23da07.chunk.js",
-    "static/media/Image_not_available.png": "/soibugh_web/static/media/Image_not_available.8ecebf6e7b85f9706838.png",
-    "static/media/soibugh_logo.png": "/soibugh_web/static/media/soibugh_logo.87e96d0e5353a1a58852.png",
-    "index.html": "/soibugh_web/index.html",
-    "main.121919d3.css.map": "/soibugh_web/static/css/main.121919d3.css.map",
-    "main.3c6f9a0c.js.map": "/soibugh_web/static/js/main.3c6f9a0c.js.map",
-    "453.9e23da07.chunk.js.map": "/soibugh_web/static/js/453.9e23da07.chunk.js.map"
+    "main.css": "/static/css/main.121919d3.css",
+    "main.js": "/static/js/main.d07def96.js",
+    "static/js/453.9e23da07.chunk.js": "/static/js/453.9e23da07.chunk.js",
+    "static/media/Image_not_available.png": "/static/media/Image_not_available.8ecebf6e7b85f9706838.png",
+    "static/media/soibugh_logo.png": "/static/media/soibugh_logo.87e96d0e5353a1a58852.png",
+    "index.html": "/index.html",
+    "main.121919d3.css.map": "/static/css/main.121919d3.css.map",
+    "main.d07def96.js.map": "/static/js/main.d07def96.js.map",
+    "453.9e23da07.chunk.js.map": "/static/js/453.9e23da07.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.121919d3.css",
-    "static/js/main.3c6f9a0c.js"
+    "static/js/main.d07def96.js"
   ]
 }
