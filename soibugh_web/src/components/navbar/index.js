@@ -94,7 +94,7 @@ const Navbar = () => {
     return (
         <>
             {/* <TopBar /> */}
-            <div className=' bg-warning pt-2 position-fixed w-100 z-1 overflow-hidden'>
+            <div className=' bg-info pt-2 position-fixed w-100 z-1 overflow-hidden'>
                 {/* <h3 onClick={() => setSelectedItem({ id: "start" })} className='text-primary-emphasis text-center cp'>SOIBUGH BUDGAM</h3> */}
                 <div className='text-center cp' onClick={() => setSelectedItem({ id: "start" })}>
                     <Image width={210} src={Logo} />
