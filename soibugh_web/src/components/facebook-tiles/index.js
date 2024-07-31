@@ -58,7 +58,7 @@ const FacebookTiles = (props) => {
         <>
             <Card className="h-100 cp" onClick={handleOnClick} style={{ backgroundColor: colors[index] }}>
                 <Card.Body>
-                    <div className="d-flex">
+                    <div className="d-flex mb-2">
                         <div className="me-2">
                             {item?.full_picture ? <Image width={90} height={90} rounded src={item?.full_picture} /> : <Image width={60} rounded src={Thumbnail} />}
                         </div>
@@ -68,15 +68,16 @@ const FacebookTiles = (props) => {
                             />}
                         </div>
 
-                        <span style={{ fontSize: "10px" }} className="fw-bold position-absolute bottom-0 pb-1">
+                        <span style={{ fontSize: "12px" }} className="fw-bold position-absolute bottom-0 pb-1">
                             <ReactTimeAgo className="fst-italic" date={item?.created_time} locale="en-US" />
                         </span>
                     </div>
+                    <div style={{ fontSize: "12px" }} className="fw-bold fst-italic cp text-primary position-absolute bottom-0 end-0 pe-3 pb-1">...Click to see more</div>
                 </Card.Body>
             </Card>
 
             <Modal
-                title="Soibugh Budgam News and Updates"
+                title={<ReactTimeAgo className="fst-italic" date={item?.created_time} locale="en-US" />}
                 okText="Open this post on Facebook"
                 confirmLoading={confirmLoading}
                 open={openModal}
@@ -89,10 +90,6 @@ const FacebookTiles = (props) => {
                 <p style={{ lineHeight: 1.5, textAlign: "justify", textTransform: "capitalize" }}
                     dangerouslySetInnerHTML={{ __html: "" + item?.message?.toLowerCase().replace(/\n/g, "<br />") }}
                 />
-
-                <span style={{ fontSize: "14px" }} className="fw-bold position-absolute bottom-0 pb-1">
-                    <ReactTimeAgo className="fst-italic" date={item?.created_time} locale="en-US" />
-                </span>
             </Modal>
         </>
     );
