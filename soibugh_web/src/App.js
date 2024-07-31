@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import './App.css';
+import MainPanel from './components/navbar/main-panel/MainPanel';
 import Navbar from './components/navbar';
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
           }
         />
       </Routes> */}
-      <Navbar />
+      {/* <Navbar /> */}
+      <MainPanel />
     </>
   );
 }
