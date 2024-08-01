@@ -1,8 +1,9 @@
 // import { toast } from 'react-toastify';
 
-import { Card, Menu, Spin, Image } from 'antd';
+import { Card, Menu, Spin } from 'antd';
+import { Image as AntdImage } from 'antd';
 import React, { useEffect, useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Image } from 'react-bootstrap';
 import { groupBy, mapMenuDataToAntdMenu1 } from '../../utils/AppExtenstions';
 
 import Thumbnail from '../../assets/images/Image_not_available.png';
@@ -114,7 +115,7 @@ const Navbar = () => {
                         <>
                             <div className='text-center mb-3'>
                                 <Spin tip="Image Loading..." spinning={false}>
-                                    {!loading ? <Image placeholder src={thumbnail} width={400} preview={false} /> : <Image placeholder width={400} fluid preview={false} src={LoadingFull} />}
+                                    {!loading ? <Image fluid src={thumbnail} width={400} /> : <Image width={400} fluid src={LoadingFull} />}
                                 </Spin>
                             </div>
 
@@ -133,7 +134,7 @@ const Navbar = () => {
                                                     <Card
                                                         className='mt-3'
                                                         hoverable
-                                                        cover={<Image alt="photo" src={image?.image_url} placeholder />}
+                                                        cover={<AntdImage alt="photo" src={image?.image_url} placeholder />}
                                                     >
                                                         <Meta onClick={() => showModal(image)} title={image?.caption} description={`Photo By ${image?.author}`} />
                                                     </Card>
