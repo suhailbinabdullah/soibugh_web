@@ -97,7 +97,7 @@ const Navbar = () => {
             <div className=' bg-info pt-2 position-fixed w-100 z-1 overflow-hidden'>
                 {/* <h3 onClick={() => setSelectedItem({ id: "start" })} className='text-primary-emphasis text-center cp'>SOIBUGH BUDGAM</h3> */}
                 <div className='text-center cp' onClick={() => setSelectedItem({ id: "start" })}>
-                    <Image width={210} src={Logo} />
+                    <Image placeholder preview={false} width={210} src={Logo} />
                 </div>
                 <Menu className='bg-info' onClick={onClick} mode="horizontal" items={items} />
             </div >
@@ -114,7 +114,7 @@ const Navbar = () => {
                         <>
                             <div className='text-center mb-3'>
                                 <Spin tip="Image Loading..." spinning={false}>
-                                    {!loading ? <Image src={thumbnail} width={400} preview={false} /> : <Image width={400} fluid preview={false} src={LoadingFull} />}
+                                    {!loading ? <Image placeholder src={thumbnail} width={400} preview={false} /> : <Image placeholder width={400} fluid preview={false} src={LoadingFull} />}
                                 </Spin>
                             </div>
 
