@@ -1,13 +1,13 @@
 // import { toast } from 'react-toastify';
 
-import { Card, Menu, Spin } from 'antd';
+import { Card, Menu, Spin, Image } from 'antd';
 import React, { useEffect, useState } from 'react';
-import { Col, Image, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { groupBy, mapMenuDataToAntdMenu1 } from '../../utils/AppExtenstions';
 
 import Thumbnail from '../../assets/images/Image_not_available.png';
 import LoadingFull from '../../assets/images/server_loading.gif';
-import Logo from '../../assets/images/soibugh_logo.png';
+import Logo from '../../assets/images/soibugh_logo.gif';
 import ImageModal from '../image-modal';
 import LandingComponent from '../landing-component';
 
@@ -114,7 +114,7 @@ const Navbar = () => {
                         <>
                             <div className='text-center mb-3'>
                                 <Spin tip="Image Loading..." spinning={false}>
-                                    {!loading ? <Image rounded src={thumbnail} width={400} fluid /> : <Image width={400} fluid rounded src={LoadingFull} />}
+                                    {!loading ? <Image src={thumbnail} width={400} preview={false} /> : <Image width={400} fluid preview={false} src={LoadingFull} />}
                                 </Spin>
                             </div>
 
@@ -128,16 +128,14 @@ const Navbar = () => {
                                 {selectedItem?.images &&
                                     selectedItem?.images.map((image, index) => {
                                         return (
-
                                             <Col key={index} xs={12} md={6} lg={4} xl={3}>
                                                 <Spin tip="Image Loading..." spinning={loading}>
                                                     <Card
-                                                        onClick={() => showModal(image)}
                                                         className='mt-3'
                                                         hoverable
-                                                        cover={<img alt="example" src={image?.image_url} />}
+                                                        cover={<Image alt="photo" src={image?.image_url} placeholder />}
                                                     >
-                                                        <Meta title={image?.caption} description={`Photo By ${image?.author}`} />
+                                                        <Meta onClick={() => showModal(image)} title={image?.caption} description={`Photo By ${image?.author}`} />
                                                     </Card>
                                                 </Spin>
                                             </Col>

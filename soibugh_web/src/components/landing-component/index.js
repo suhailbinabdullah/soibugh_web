@@ -35,8 +35,8 @@ const LandingComponent = (props) => {
 
     return (
         <>
-            <h1 className="text-center">WECOME TO VILLAGE SOIBUGH</h1>
-            <Carousel autoplay arrows>
+            <h1 className="text-center text-success">WECOME TO VILLAGE SOIBUGH</h1>
+            {/* <Carousel autoplay arrows>
                 {data?.images?.map((image, index) => {
                     return (
                         <div key={index}>
@@ -44,9 +44,7 @@ const LandingComponent = (props) => {
                         </div>
                     )
                 })}
-            </Carousel>
-
-            {console.log(facebookData)}
+            </Carousel> */}
 
             <Spin spinning={spinner} size="large" tip="Loading Updates">
                 <h2 className="my-4 text-danger">News and Updates</h2>

@@ -1,9 +1,9 @@
-import { Modal } from "antd";
+import { Modal, Image } from "antd";
 import TimeAgo from 'javascript-time-ago';
 import en from 'javascript-time-ago/locale/en';
 import ru from 'javascript-time-ago/locale/ru';
 import { useState } from "react";
-import { Card, Image } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import ReactTimeAgo from "react-time-ago";
 import Thumbnail from '../../assets/images/Image_not_available.png';
 import { KEY_FACEBOOK_ACCESS_TOKEN, KEY_FACEBOOK_ACTIONS } from "../../utils/AppConstants";
@@ -56,13 +56,13 @@ const FacebookTiles = (props) => {
 
     return (
         <>
-            <Card className="h-100 cp" onClick={handleOnClick} style={{ backgroundColor: colors[index] }}>
+            <Card className="h-100 cp" style={{ backgroundColor: colors[index] }}>
                 <Card.Body>
                     <div className="d-flex mb-2">
                         <div className="me-2">
-                            {item?.full_picture ? <Image width={90} height={90} rounded src={item?.full_picture} /> : <Image width={60} rounded src={Thumbnail} />}
+                            {item?.full_picture ? <Image width={90} height={90} rounded src={item?.full_picture} placeholder /> : <Image width={60} rounded src={Thumbnail} />}
                         </div>
-                        <div className="max-lines">
+                        <div onClick={handleOnClick} className="max-lines">
                             {item?.message && <p style={{ fontSize: "12px", textAlign: "justify", textTransform: "capitalize" }}
                                 dangerouslySetInnerHTML={{ __html: "" + item?.message?.substring(0, 160).toLowerCase().replace(/\n/g, "<br />") }}
                             />}
@@ -72,7 +72,7 @@ const FacebookTiles = (props) => {
                             <ReactTimeAgo className="fst-italic" date={item?.created_time} locale="en-US" />
                         </span>
                     </div>
-                    <div style={{ fontSize: "12px" }} className="fw-bold fst-italic cp text-primary position-absolute bottom-0 end-0 pe-3 pb-1">...Click to see more</div>
+                    <div onClick={handleOnClick} style={{ fontSize: "12px" }} className="fw-bold fst-italic cp text-primary position-absolute bottom-0 end-0 pe-3 pb-1">...Click to see more</div>
                 </Card.Body>
             </Card>
 
@@ -83,9 +83,9 @@ const FacebookTiles = (props) => {
                 open={openModal}
                 onOk={handleOpenOnFacebookBtn}
                 onCancel={() => setOpenModal(false)}>
-                <Image src={item?.full_picture} fluid />
-                <br />
-                <br />
+                <div className="text-center mb-4">
+                    <Image src={item?.full_picture} preview={false} />
+                </div>
 
                 <p style={{ lineHeight: 1.5, textAlign: "justify", textTransform: "capitalize" }}
                     dangerouslySetInnerHTML={{ __html: "" + item?.message?.toLowerCase().replace(/\n/g, "<br />") }}
