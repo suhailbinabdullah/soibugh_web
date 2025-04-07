@@ -4,7 +4,8 @@ import "react-toastify/dist/ReactToastify.css";
 import './App.css';
 import Navbar from './components/navbar';
 
-/* I am adding this comment just for git testing that from which user this is getting pushed, just changed the global emal and now testing again */
+/* I am adding this comment just for git testing that from which user this is getting pushed, just changed the global emal and now testing again 
+now testing on random user*/
 
 function App() {
   return (
