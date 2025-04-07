@@ -4,6 +4,8 @@ import "react-toastify/dist/ReactToastify.css";
 import './App.css';
 import Navbar from './components/navbar';
 
+/* I am adding this comment just for git testing that from which user this is getting pushed */
+
 function App() {
   return (
     <>
